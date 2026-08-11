@@ -11,7 +11,7 @@ from datetime import datetime, timezone, timedelta, date as _date
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. PAGE CONFIG & GLOBAL CSS
 # ─────────────────────────────────────────────────────────────────────────────
-st.set_page_config(page_title="Sahayaks Academy Quiz", layout="wide")
+st.set_page_config(page_title="Quiz By Jain Public School For Class 10th Maths", layout="wide")
 
 st.markdown("""
 <style>
@@ -268,7 +268,7 @@ def build_certificate_pdf(user_name, chapter, score_pct, date_str) -> bytes:
     # Org name
     c.setFillColor(colors.HexColor("#FFD700"))
     c.setFont("Helvetica-Bold", 40)
-    c.drawCentredString(w/2, h-100, "Sahayaks Education")
+    c.drawCentredString(w/2, h-100, "Jain Public School")
 
     # Subtitle
     c.setFillColor(colors.white)
@@ -325,7 +325,7 @@ def build_certificate_pdf(user_name, chapter, score_pct, date_str) -> bytes:
     # Footer
     c.setFillColor(colors.HexColor("#555E7A"))
     c.setFont("Helvetica-Oblique", 11)
-    c.drawCentredString(w/2, h-450, "Sahayaks Education — Empowering Every Learner")
+    c.drawCentredString(w/2, h-450, "Jain Public School — Empowering Every Learner")
 
     c.save()
     buf.seek(0)
@@ -359,7 +359,7 @@ def cert_download_html(b64_str: str, filename: str) -> str:
 
 # ── LOGIN ─────────────────────────────────────────────────────────────────────
 if st.session_state.step == "login":
-    st.markdown("<h1 style='text-align:center;color:#FFD700;'>Sahayaks Education</h1>",
+    st.markdown("<h1 style='text-align:center;color:#FFD700;'>Jain Public School</h1>",
                 unsafe_allow_html=True)
     _, mid, _ = st.columns([1, 1.5, 1])
     with mid:
